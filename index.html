@@ -58,7 +58,7 @@
         <section class="section hero">
             <div class="container ">
                 <h1 class="title">Эффективные решения для вашего бизнеса</h1>
-                <button type="button" class="offer">Заказать услугу</button>
+                <button type="button" class="offer" data-modal-open>Заказать услугу</button>
             </div>
         </section>
 
@@ -163,7 +163,6 @@
                             <ul class="team-list">
                                 <li class="team-item-list">
                                     <a href="" class="team-social">
-
                                         <svg class="social-links">
                                             <use href="./images/symbol-defs.svg#icon-instagram"></use>
                                         </svg>
@@ -440,6 +439,16 @@
             </div>
         </div>
     </footer>
+    <div class="backdrop is-hidden" data-modal>
+        <div class="modal">
+            <button class="modal-close" data-modal-close>
+                <svg class="close-icon" width='11' height='11'>
+                    <use href="./images/sprite-close.svg#icon-close"></use>
+                </svg>
+            </button>
+        </div>
+
+    </div>
     <script src="./js/modal.js"></script>
 </body>
 

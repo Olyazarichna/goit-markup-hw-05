@@ -152,7 +152,7 @@ img {
 /* Section hero */
 
 .section.hero {
-  margin: auto;
+  margin: 0 auto;
   background-color: #c4c4c4;
   padding-top: 200px;
   padding-bottom: 200px;
@@ -578,18 +578,20 @@ img {
   width: 100%;
   height: 100%;
   background: rgba(0, 0, 0, 0.2);
+
+  /* opacity: 1; */
 }
 .is-hidden {
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
+  transform: scale(1);
 }
-
 .modal {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%);
+  transform: translate(-50%, -50%) scale(1);
   width: 528px;
   height: 581px;
   background-color: #ffffff;
@@ -613,8 +615,8 @@ img {
   background-color: #ffffff;
   cursor: pointer;
 }
-/* .modal.is-hidden {
-  animation: close 4s alternate;
+/* .backdrop.is-hidden .modal {
+  transform: scale(0.5);
 } */
 
 .close-icon {

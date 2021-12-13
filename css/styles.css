@@ -554,9 +554,6 @@ img {
   height: 294px;
   background: rgba(33, 150, 243, 0.9);
   transform: translateY(0);
-  /* transition-property: transform;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); */
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .element:hover .element-overlay {
@@ -570,6 +567,7 @@ img {
   letter-spacing: 0.03em;
   color: #ffffff;
 }
+
 /* модальне вікно  */
 .backdrop {
   position: fixed;
@@ -578,14 +576,15 @@ img {
   width: 100%;
   height: 100%;
   background: rgba(0, 0, 0, 0.2);
-
-  /* opacity: 1; */
+  visibility: visible;
+  opacity: 1;
+  transition: opacity 250ms, visibility 250ms;
 }
+
 .is-hidden {
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
-  transform: scale(1);
 }
 .modal {
   position: absolute;
@@ -615,9 +614,6 @@ img {
   background-color: #ffffff;
   cursor: pointer;
 }
-/* .backdrop.is-hidden .modal {
-  transform: scale(0.5);
-} */
 
 .close-icon {
   display: inline-flex;
